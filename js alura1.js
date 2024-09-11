@@ -7,3 +7,7 @@ const citação = 'Meu Nome é';
 const meuNome = 'Nicole' ;
 
 console.log(sitacao + meuNome)
+
+
+// concatenacao - juntar duas ou mais variaveis (texto operadores variaveis)
+// template string ou template literal
