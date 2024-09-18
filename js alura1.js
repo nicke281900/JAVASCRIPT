@@ -1,13 +1,12 @@
-const texto1 ="Ola Mundo";
-const texto2 ="Ola Mundo";
-const senha = "senhasupersegura456";
-const stringdenumeros = "34567";
+console.log ("meu primeiro programa trabalhando com variaveis")
 
-const citação = 'Meu Nome é';
-const meuNome = 'Nicole' ;
+cvonst idade = 17
 
-console.log(sitacao + meuNome)
+console log ("idade");
+console log ( idade );
+console log (idade+2);
+console log (idade-2);
+console log (idade/2);
 
-
-// concatenacao - juntar duas ou mais variaveis (texto operadores variaveis)
-// template string ou template literal
+const idadesoma =idade+2;
+const.log (idadesomada);
