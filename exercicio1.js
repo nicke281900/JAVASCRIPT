@@ -9,7 +9,7 @@ let multoplicaçao = numero1 * numero2;
 let divisao = numero1 / numero2;
 
 //exibe os resultados no console
-console.log soma ("+soma");
-console.log subtraçao ("+subtracao");
-console.log multoplicaçao ("+multiplicacao");
-console.log divisao ("+divisao");
+console.log (soma " +soma");
+console.log (subtraçao " +subtracao");
+console.log (multoplicaçao " +multiplicacao");
+console.log (divisao " +divisao");
