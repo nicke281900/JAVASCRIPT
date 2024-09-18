@@ -1,12 +1,13 @@
-console.log("Meu primeiro programa;trbalho com variaveis")
+console.log("Trabalhando com variáveis");
 
-const idafde = 17;
+console.log("Trabalhando com variáveis");
+// JS é case sensitive
 
-console.log (idade);
-console.log (idade)
-console.log (idade+2)
-console.log (idade-2)
-console.log (idade/2);
+//console.log("Trabalhando com variáveis");
+JS é case sensitive
 
-const idadesomada = idade+2;
-console.log(idadesomada);
+idade =29;
+Idade =30;
+const idade = 29
+const nome = "Ricardo"
+let ano = 2020
