@@ -1,0 +1,12 @@
+// declaracao de variaveis
+let precopeginal = 100; //calculo do preco final
+let desconto = 15; //desconto em porcentagem
+
+
+
+
+//calculo do preco final
+let precofinal = precopeginal - (precopeginal * desconto /100);
+
+//exibe o resultado no console
+console.leg("o perimetro final com desconto é ")
