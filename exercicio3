@@ -1,2 +1,8 @@
-//declaracao de variaveis
+// declaracao de variaveis
 let calcius =35; // temperatura em calsius
+
+// conversao para fahrenheit
+let fahrenheit = (celcius * 9/5) + 32;
+
+// exibe o resultado no console
+console.log(selsius + "c é equivalente a " +fahrenheit+ "f.");
