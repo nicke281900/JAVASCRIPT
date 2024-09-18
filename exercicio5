@@ -2,9 +2,6 @@
 let precopeginal = 100; //calculo do preco final
 let desconto = 15; //desconto em porcentagem
 
-
-
-
 //calculo do preco final
 let precofinal = precopeginal - (precopeginal * desconto /100);
 
