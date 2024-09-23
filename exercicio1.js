@@ -1,6 +1,6 @@
 // declaracao de variaveis
-let numero1 = 10
-let numero2 = 5
+let numero1 = 10 //primeiro numero
+let numero2 = 5 //senguno numero
 
 //operadores aritmeticos
 let soma = numero1 + numero2;
