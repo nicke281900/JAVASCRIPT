@@ -7,4 +7,4 @@ const pi = 3.14159 //valor de pi
 let perimetro =2 * pi * raio;
 
 //exibe o resultado no console
-console.log("o perimetro do circulo é:" +perimetro);
+console.log("o perimetro do circulo e:" +perimetro);

@@ -6,5 +6,5 @@ let altura 5; //largura do retangulo
 let area = largura * autura;
 
 //exibe o resultado no console
-console.log("a area do retangulo é:"+area);
+console.log("a area do retangulo e:"+area);
 
