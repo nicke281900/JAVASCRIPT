@@ -1,0 +1,2 @@
+let saladisponivel=null;
+console.log("sala disponivel:+saladisponivel"); // mostrara 'null'
