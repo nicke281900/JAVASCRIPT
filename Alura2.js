@@ -1,9 +1,9 @@
-console.log("Trabalhando com variáveis");
+console.log("Trabalhando com variaveis");
 
-console.log("Trabalhando com variáveis");
+console.log("Trabalhando com variaveis");
 // JS e case sensitive
 
-//console.log("Trabalhando com variáveis");
+//console.log("Trabalhando com variaveis");
 JS e case sensitive
 
 idade =29;
