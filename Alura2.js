@@ -1,10 +1,10 @@
 console.log("Trabalhando com variáveis");
 
 console.log("Trabalhando com variáveis");
-// JS é case sensitive
+// JS e case sensitive
 
 //console.log("Trabalhando com variáveis");
-JS é case sensitive
+JS e case sensitive
 
 idade =29;
 Idade =30;
