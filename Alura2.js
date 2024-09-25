@@ -4,7 +4,7 @@ console.log("Trabalhando com variaveis");
 // JS e case sensitive
 
 //console.log("Trabalhando com variaveis");
-jscase sensitive
+js case sensitive
 
 idade =29;
 idade=30;
