@@ -1,6 +1,6 @@
 //declaracao de variaveis
-let largura 8; //largura do retangulo
-let altura 5; //largura do retangulo
+let largura8; //largura do retangulo
+let altura5; //largura do retangulo
 
 //calculo da area
 let area = largura * autura;
