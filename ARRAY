@@ -1,0 +1,2 @@
+let frutas = ["MACA", "BANANA" , "LARANJA" ];
+console.log("A segunda fruta e:"+frutas[1]);
