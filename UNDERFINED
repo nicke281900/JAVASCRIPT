@@ -1,0 +1,2 @@
+let altura;
+console.log("Altura:"+Altura);//devera mostrar 'underfined'
