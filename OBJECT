@@ -3,4 +3,4 @@ Merca:"toiota",
 modelo:"corolla",
 ano: 2024
 };
-console.log("carro:" + carro.Merca + " + carro.Modelo + "("+carro.ano+")");
+console.log("carro:" + carro.Merca + "" + carro.Modelo + "("+carro.ano+")");
