@@ -1,5 +1,0 @@
-let raio =7; //valor do raio
-const pi =3.14159; // constante para o valor pi
-let area = pi*raio*raio;//calculo da area
-
-console.log("a area do circulo e:"+ area);

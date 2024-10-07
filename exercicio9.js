@@ -1,3 +1,4 @@
+// Definindo as variáveis
 const nome = "nicole";
 const idade = 17;
 const inscrito = true;
