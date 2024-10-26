@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jogo de Capturar Objetos Caindo</title>
+    <style>
+        /* Definindo o estilo de tela do jogo */
+        canvas {
+            background-color: aqua;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"width="500" height="500"></canvas>
+<script>
+    // Seleciona o canvas e o contexto 2D
+    const <Canvas> document.getElementById(gameCanvas)
+    const cdx = canvas.getContext("2D");
+
+    // variaveis do jogo
+    let jogadorX canvas.width / 2 - 25; // posição inicial do jogo
+    const jogadorLargura =50; // Lugar do jogador
+    const jogadorAltura =20; // Altura do jogador
+    let objetoX = Math.random() * (canva.width - 20 ); // Posição inicial do objeto
+    let objetoY = // O objeto comessa no topo
+    const objetoLargiura = 20; // Largura do objeto
+    const objetoAltura = 20; // Altura do objeto
+    let velocidadeObjeto = 3; // velocidade de queda do objeto
+    let pontuacao = 0; // Pontuação inicial
+    let jogoAtivo = true; // Controlase o jogo esta ativo
+</body>
