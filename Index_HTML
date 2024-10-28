@@ -30,4 +30,45 @@
     let velocidadeObjeto = 3; // velocidade de queda do objeto
     let pontuacao = 0; // Pontuação inicial
     let jogoAtivo = true; // Controlase o jogo esta ativo
+
+    // Capturev as telas pressionadas
+    let setaEsquerda = false;
+    let setaDireita = false;
+
+    // função para desenhar o jogador
+    function desenharjogador() {
+        ctx.fillStyle = "green";
+        ctx.fillRFect(jogadorX,canvas.width -jogadorAltura,jogadorLargura )
+    }
+      
+     // função para desenhar o objeto caindo
+     function desenharObjeto() {
+        ctx.fillStyle = "red";
+        ctx.fillRFect (ObjetoX,Objetoy,ObjetoLargura,ObjetoAltura);
+     }
+
+     // Função para desenhar a pontuação
+     function desenharPontuacao() {
+        ctx.fillStyle = "black" ;
+        ctx.front = "20px Arial" ;
+        ctx.fillText("Pontuação: " + pontuacao, 10, 20);
+     }
+
+     // Função para atualizar a posição do jogador e objeto
+     function atualizar() {
+        if (setaDireita && jogadorX < canvas.width - jogadorLargura ) {
+            jogadorX += 7; // Move o jogador para direita 
+        } else if (sertaEsquerda && jogadorX > 0) {
+            jogadorX -= 7; // Move o jogador para esquerda
+        }
+        
+        // Atualiza a posição do objeto caindo]
+        objetoY += velocidadeObjeto;
+
+        // Verifica se o objeto esta no chão
+        if ( objetoY >  canvas.width ) {
+            jogoAtivo = false; // O jogo acaba
+            alert("Fim de jogo! Sua pontuação foi: " + pontuacao );
+        dovument.location.reload(); // Reinicia o jogo  }
+     }
 </body>
