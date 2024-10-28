@@ -74,9 +74,55 @@
 
          // Verifica colisão com o jogador
          if (
-            objetoY +
-            jogadorX +
-            jogadorX -
-         )
-     }
+            objetoY + ObjetoAltura
+            jogadorX + jogadorLargura
+            jogadorX - jogadorX +  jogadorLargura
+         ) {
+            Pontuacao++; // Almenta a pontuação
+            // Reposiciona o objeto no topo, em uma posição aleatória
+            jogadorX = math.random() * (canvas.width - canvas.height)
+            jogadorX = 0;
+            velocidadeObjeto += 0.5; // Almenta a velocidade do objeto gradualmente
+         }
+        }
+
+        // Funçao principal do jogo
+        Funçao desenhar(){
+            if (jogoAtivo){
+            // Limpa o canvas
+            <ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+           // Desenha os elementos do jogo
+           desenhajogador();
+           desenhaObjeto();
+           desenhaPontuacao();
+
+           // Atualiza a pontuaçao dos alimentos
+           atualizar();
+
+           // Chama o proximo frame
+           requestAnimationFrame(desenhar);
+            }
+        }
+
+        // Capitura os eventos de teclas
+        document.addEventlistener("keydown",function (event) {
+        if (event.key === "ArrowRight") {
+            setaDireita = true;
+        } else if (event.key === "ArrowLeft"){
+            setaEsquerda = true;
+        }
+        });
+
+        document.addEventlistener("keyup",function (event){
+            if (event.key === "ArrowRight"){
+                setaDireita = false;
+             } else if (event.key === "ArrowLeft"){
+                setaEsquerda = false;
+             }    
+        });
+        // Inicia o jogo
+        desenhar();
+        </script>
 </body>
+</html>
