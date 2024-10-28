@@ -69,6 +69,14 @@
         if ( objetoY >  canvas.width ) {
             jogoAtivo = false; // O jogo acaba
             alert("Fim de jogo! Sua pontuação foi: " + pontuacao );
-        dovument.location.reload(); // Reinicia o jogo  }
+        dovument.location.reload(); // Reinicia o jogo
+         }
+
+         // Verifica colisão com o jogador
+         if (
+            objetoY +
+            jogadorX +
+            jogadorX -
+         )
      }
 </body>
