@@ -16,45 +16,45 @@
     <canvas id="gameCanvas"width="500" height="500"></canvas>
 <script>
     // Seleciona o canvas e o contexto 2D
-    const <Canvas> document.getElementById(gameCanvas)
+    const canvas = document.getElementById(gameCanvas)
     const cdx = canvas.getContext("2D");
 
     // variaveis do jogo
-    let jogadorX canvas.width / 2 - 25; // posição inicial do jogo
+    let jogadorX canvas.width / 2 - 25; // posicao inicial do jogo
     const jogadorLargura =50; // Lugar do jogador
     const jogadorAltura =20; // Altura do jogador
-    let objetoX = Math.random() * (canva.width - 20 ); // Posição inicial do objeto
+    let objetoX = Math.random() * (canva.width - 20 ); // Posicao inicial do objeto
     let objetoY = // O objeto comessa no topo
     const objetoLargiura = 20; // Largura do objeto
     const objetoAltura = 20; // Altura do objeto
     let velocidadeObjeto = 3; // velocidade de queda do objeto
-    let pontuacao = 0; // Pontuação inicial
+    let pontuacao = 0; // Pontuacao inicial
     let jogoAtivo = true; // Controlase o jogo esta ativo
 
     // Capturev as telas pressionadas
     let setaEsquerda = false;
     let setaDireita = false;
 
-    // função para desenhar o jogador
+    // funcao para desenhar o jogador
     function desenharjogador() {
         ctx.fillStyle = "green";
         ctx.fillRFect(jogadorX,canvas.width -jogadorAltura,jogadorLargura )
     }
       
-     // função para desenhar o objeto caindo
+     // funcao para desenhar o objeto caindo
      function desenharObjeto() {
         ctx.fillStyle = "red";
         ctx.fillRFect (ObjetoX,Objetoy,ObjetoLargura,ObjetoAltura);
      }
 
-     // Função para desenhar a pontuação
+     // Funcao para desenhar a pontuacao
      function desenharPontuacao() {
         ctx.fillStyle = "black" ;
         ctx.front = "20px Arial" ;
-        ctx.fillText("Pontuação: " + pontuacao, 10, 20);
+        ctx.fillText("Pontuacao: " + pontuacao, 10, 20);
      }
 
-     // Função para atualizar a posição do jogador e objeto
+     // Funcao para atualizar a posicao do jogador e objeto
      function atualizar() {
         if (setaDireita && jogadorX < canvas.width - jogadorLargura ) {
             jogadorX += 7; // Move o jogador para direita 
@@ -62,32 +62,32 @@
             jogadorX -= 7; // Move o jogador para esquerda
         }
         
-        // Atualiza a posição do objeto caindo]
+        // Atualiza a posicao do objeto caindo]
         objetoY += velocidadeObjeto;
 
-        // Verifica se o objeto esta no chão
+        // Verifica se o objeto esta no chao
         if ( objetoY >  canvas.width ) {
             jogoAtivo = false; // O jogo acaba
-            alert("Fim de jogo! Sua pontuação foi: " + pontuacao );
+            alert("Fim de jogo! Sua pontuacao foi: " + pontuacao );
         dovument.location.reload(); // Reinicia o jogo
          }
 
-         // Verifica colisão com o jogador
+         // Verifica colisao com o jogador
          if (
             objetoY + ObjetoAltura
             jogadorX + jogadorLargura
             jogadorX - jogadorX +  jogadorLargura
          ) {
-            Pontuacao++; // Almenta a pontuação
-            // Reposiciona o objeto no topo, em uma posição aleatória
+            Pontuacao++; // Almenta a pontuacao
+            // Reposiciona o objeto no topo, em uma posicao aleatoria
             jogadorX = math.random() * (canvas.width - canvas.height)
             jogadorX = 0;
             velocidadeObjeto += 0.5; // Almenta a velocidade do objeto gradualmente
          }
         }
 
-        // Funçao principal do jogo
-        Funçao desenhar(){
+        // Funcao principal do jogo
+        Funcao desenhar(){
             if (jogoAtivo){
             // Limpa o canvas
             <ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -97,7 +97,7 @@
            desenhaObjeto();
            desenhaPontuacao();
 
-           // Atualiza a pontuaçao dos alimentos
+           // Atualiza a pontuacao dos alimentos
            atualizar();
 
            // Chama o proximo frame
