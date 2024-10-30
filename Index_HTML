@@ -85,7 +85,7 @@
             velocidadeObjeto += 0.5; // Almenta a velocidade do objeto gradualmente
          }
         }
-
+        
             // Funcao principal do jogo
             Funcao desenhar(){
             if (jogoAtivo){
