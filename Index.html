@@ -32,20 +32,20 @@
     let pontuacao = 0; // Pontuacao inicial
     let jogoAtivo = true; // Controlase o jogo esta ativo
 
-    // Capturev as telas pressionadas
+    // Captura as telas pressionadas
     let setaEsquerda = false;
     let setaDireita = false;
 
     // funcao para desenhar o jogador
     function desenharjogador() {
         ctx.fillStyle = "green";
-        ctx.fillRFect(jogadorX,canvas.width -jogadorAltura,jogadorLargura )
+        ctx.fillRect(jogadorX, canvas.whight - jogadorAltura, jogadorLargura, jogadorAltura);
     }
       
      // funcao para desenhar o objeto caindo
      function desenharObjeto() {
         ctx.fillStyle = "red";
-        ctx.fillRFect (ObjetoX,Objetoy,ObjetoLargura,ObjetoAltura);
+        ctx.fillRFect (ObjetoX, ObjetoY, ObjetoLargura, ObjetoAltura);
      }
 
      // Funcao para desenhar a pontuacao
@@ -63,33 +63,34 @@
             jogadorX -= 7; // Move o jogador para esquerda
         }
         
-        // Atualiza a posicao do objeto caindo]
+        // Atualiza a posicao do objeto caindo
         objetoY += velocidadeObjeto;
 
-        // Verifica se o objeto esta no chao
-        if ( objetoY >  canvas.width ) {
+        // Verifica se o objeto tocou no chao
+        if (objetoY >  canvas.height) {
             jogoAtivo = false; // O jogo acaba
-            alert("Fim de jogo! Sua pontuacao foi: " + pontuacao );
-        dovument.location.reload(); // Reinicia o jogo
+            alert("Fim de jogo! Sua pontuacao foi: " + pontuacao);
+        document.location.reload(); // Reinicia o jogo
          }
 
          // Verifica colisao com o jogador
          if (
-            objetoY + ObjetoAltura
-            jogadorX  + jogadorLargura
-            jogadorX - jogadorX +  jogadorLargura
+            objetoY + ObjetoAltura >  canvas.height - objetoAltura &&
+            objetoX  + jogadorLargura > jogadorX &&
+            objetoX < jogadorX +  jogadorLargura
          ) {
-            Pontuacao++; // Almenta a pontuacao
+
+            Pontuacao++; // Aumenta a pontuacao
             // Reposiciona o objeto no topo, em uma posicao aleatoria
-            jogadorX = math.random() * (canvas.width - canvas.height)
+            jogadorX = math.random() * (canvas.width - objetoLargura);
             jogadorX = 0;
             velocidadeObjeto += 0.5; // Almenta a velocidade do objeto gradualmente
          }
         }
         
             // Funcao principal do jogo
-            Funcao desenhar(){
-            if (jogoAtivo){
+            function desenhar() {
+            if (jogoAtivo) {
             // Limpa o canvas
             <ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -98,7 +99,7 @@
            desenhaObjeto();
            desenhaPontuacao();
 
-           // Atualiza a pontuacao dos alimentos
+           // Atualiza a posicao dos alimentos
            atualizar();
 
            // Chama o proximo frame
@@ -107,18 +108,18 @@
         }
 
         // Capitura os eventos de teclas
-        document.addEventlistener("keydown",function (event) {
+        document.addEventlistener("keydown", function (event) {
         if (event.key === "ArrowRight") {
             setaDireita = true;
-        } else if (event.key === "ArrowLeft"){
+        } else if (event.key === "ArrowLeft") {
             setaEsquerda = true;
         }
         });
 
-        document.addEventlistener("keyup",function (event){
+        document.addEventlistener("keyup",function (event) {
             if (event.key === "ArrowRight"){
                 setaDireita = false;
-             } else if (event.key === "ArrowLeft"){
+             } else if (event.key === "ArrowLeft") {
                 setaEsquerda = false;
              }    
         });
