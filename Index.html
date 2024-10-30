@@ -7,7 +7,7 @@
     <style>
         /* Definindo o estilo de tela do jogo */
         canvas {
-            background-color: rgb(239, 118, 199);
+            background-color: lightblue;
             display: block;
             margin: 0 auto;
         }
@@ -17,11 +17,11 @@
     <canvas id="gameCanvas"width="500" height="500"></canvas>
 <script>
     // Seleciona o canvas e o contexto 2D
-    const canvas  = document.getElementById(gameCanvas)
+    const canva = document.getElementById("gameCanvas");
     const cdx = canvas.getContext("2D");
 
     // variaveis do jogo
-    let jogadorX canvas.width / 2 - 25; // posicao inicial do jogo
+    let jogadorX = canvas.width / 2 - 25; // posicao inicial do jogo
     const jogadorLargura =50; // Lugar do jogador
     const jogadorAltura =20; // Altura do jogador
     let objetoX = Math.random() * (canva.width - 20 ); // Posicao inicial do objeto
