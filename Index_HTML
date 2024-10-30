@@ -16,7 +16,7 @@
     <canvas id="gameCanvas"width="500" height="500"></canvas>
 <script>
     // Seleciona o canvas e o contexto 2D
-    const canvas = document.getElementById(gameCanvas)
+    const canvas  = document.getElementById(gameCanvas)
     const cdx = canvas.getContext("2D");
 
     // variaveis do jogo
