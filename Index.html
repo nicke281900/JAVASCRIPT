@@ -14,11 +14,12 @@
     </style>
 </head>
 <body>
-    <canvas id="gameCanvas"width="500" height="500"></canvas>
+    <canvas id="gameCanvas" width="500" height="500"></canvas>
 <script>
+
     // Seleciona o canvas e o contexto 2D
     const canva = document.getElementById("gameCanvas");
-    const cdx = canvas.getContext("2D");
+    const ctx = canvas.getContext("2d");
 
     // variaveis do jogo
     let jogadorX = canvas.width / 2 - 25; // posicao inicial do jogo
@@ -95,7 +96,7 @@
             ctx.clearRect (0, 0, canva.width, canva.height)
 
            // Desenha os elementos do jogo
-           desenhajogador();
+           desenhaJogador();
            desenhaObjeto();
            desenhaPontuacao();
 
