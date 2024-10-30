@@ -75,7 +75,7 @@
          // Verifica colisao com o jogador
          if (
             objetoY + ObjetoAltura
-            jogadorX + jogadorLargura
+            jogadorX  + jogadorLargura
             jogadorX - jogadorX +  jogadorLargura
          ) {
             Pontuacao++; // Almenta a pontuacao
@@ -86,8 +86,8 @@
          }
         }
 
-        // Funcao principal do jogo
-        Funcao desenhar(){
+            // Funcao principal do jogo
+            Funcao desenhar(){
             if (jogoAtivo){
             // Limpa o canvas
             <ctx.clearRect(0, 0, canvas.width, canvas.height);
