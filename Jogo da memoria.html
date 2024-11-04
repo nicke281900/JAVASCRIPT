@@ -64,6 +64,17 @@
     function  restardButton(){
         gridinnerHTML = ""; // Limpa o grid
         const shufflerdCard = shuffle([...cardValue]); // Embaralha os valores da carta
-        
-
+        shufflerdCards.forEach(value => { 
+        const card = document.creatElemnt("div");
+        card.dataset 
+        card.addEventListenr("click", flipCard);
+        grid.appendChild(card);
+        })
+      resetGame(); // Reseta as variaveis do jogo
     }
+     // Funcao para virar a carta
+     function flipCard() {
+        if (lockBoard || this.classlist.contains("flipped") || this.classlist.contains("matched")) return;
+        this.textContent =  this.dataset.value; // Mostra o valor da carta
+        this.classlist.add("flipped");
+     }
