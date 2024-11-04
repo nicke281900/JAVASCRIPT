@@ -40,5 +40,23 @@
     button {
         margin-top: 20px;
         padding: 10px 20px;
-        font-size: ;
+        font-size: 16px;
+    }
+</style>
+</head>
+<body>
+    <div class="grid" id="grid"></div>
+    <button id="restardButton"></button>
+
+    <script>
+    const carValues = []
+    const grid = document.getElementById("grid");
+    const restardButton = document.getElementById("getElementByI");
+    let fistCard = null;
+    let secondCard = null;
+    let lockBoard = false; // Para evitar que o jogador clique durante a animacao
+
+    // Embaralha o array
+    function chuffle(array){
+      return array.sort(() => Math.random()- 0.5);  
     }
