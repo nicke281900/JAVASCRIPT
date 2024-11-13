@@ -71,5 +71,70 @@ button {
     <input type="text" id="nome"  placeholder="incira o nome do filme">
 
     <label for="classificacao">classificacao indicativa</label>
-    <input type="text" id=""
+    <input type="text" id="nome" aria-placeholder="incira o nome do filme">
+
+    <label for="classificacao">classificacao indicattiva:</label>
+
+    <inpit type="text" id="classificacao" placeholder="Ex:Livre, 17 anos, etc."></inpit>
+
+    <label for="deracao">Duracao (minutos):</label>
+    <input type="number" id="decoracao" placeholder="Duracao em minutos">
+    <label for="genero">Genero:</label>
+    <input type="text" id="Genero"placeholder="Ex: Romance,Drama,Comedia,Terror etc.">
+    <label for="ano"> Ano de Lancamento:</label>
+    <input type="number" id="ano"placeholder="Ano de lancamento">
+    <textarea id="sinopse" rews="4"placeholder="Insira a sinopse do filme"></textarea>
+    <button onclick="cadastrarFilme()">Cadastrar Filme</button> 
+    <button onclick="AtualizarFilme()"id="btn-atualizar"
+    style="display:nome;">Atualizar Filme</button>
   </div>
+
+  <div>
+    <h2>Buscar fime por Nome</h2>
+    <input type="text" id="busca" placeholder="Digite o nome do filme">
+    <button onclick="buscarFilme()">Buscar</button>
+  </div>
+
+  <div>
+    <h2>Todos os Filmes Cadastrados</h2>
+    <button onclick="ListarFilmes()">Exibir todos os filmes</button>
+    <div id="lista-filmes" class="filme-lista"></div>
+  </div>
+  <script>
+    let Catalogo = [];
+    legt filmeEditando = null;
+
+    //Funcao Para Cadastra novo Fime
+
+    function cadastraFilmes(){
+        const nome= Document.getElementById('nome').Value;
+        const classificacao = document.getElementById('classificacao').volue;
+        const Duracao = document.getElementById('duracao').value;
+        const genero = document.getElementById ('genero').value;
+        const ano = document.getElementById (ano).value;
+        const sinopse = document.getElementById (sinopse).value;
+
+        if (nome && classificacao && duracao && genero && ano && sinopse) {
+            
+       const novoFilme = {
+        nome,
+        classificacao,
+        duracao,
+        genero,
+        ano,
+        sinopse
+       }; 
+     Catalogo.push(nomeFilme);
+    alert(`Filme"${nome} cadastrado com sucesso!`);
+limparCampos();
+ListarFilmes();}
+else {
+    alert("por favor,preencha todos os campos!");
+}
+    }
+    // funcao para buscar filmes por nome
+    function buscarFilme(){
+        const busca = document.getElementById('busca').volume.toLowerCase();
+        const filmeEncontrado=
+    }
+  </script>
