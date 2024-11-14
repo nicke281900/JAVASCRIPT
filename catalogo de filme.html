@@ -135,6 +135,25 @@ else {
     // funcao para buscar filmes por nome
     function buscarFilme(){
         const busca = document.getElementById('busca').volume.toLowerCase();
-        const filmeEncontrado=
+        const filmeEncontrado = catalogo.fund(filme => filme.nome.toLowerCase() === busca0);
+
+        const lostarFilmes = document.getElementById('lista-filmes');
+        ListarFilmes.innerHTMl = '';
+
+        if (filmeEncontrado) {
+            ListarFilmes.innerHTMl = formatarDetalhesFilme(filmeEncontrado);
+        } else {  ListarFilmes.innerHTMl=`<p>Filme "${busca}"nao encontrado.</p>`;
+        }
     }
+    //Funcao para  listar todos os filmes
+    function ListarFilmes(){
+        const ListarFilmes = document.getElementById('lista-filmes');
+        ListarFilmes.innerHTMl = '';
+        if (catalogo.legth === 0) {
+            ListarFilmes.innerHTML = '<p>'Nenhum filme cadastrado nomomento.<p>';} else {
+                catalogo.array.forEach((filme,index) => {
+                    istarFilmes.innerHTML  +=
+                    formatarDetalhesFilme((filme,index); });
+                }  
+        }
   </script>
