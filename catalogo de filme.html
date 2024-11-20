@@ -150,10 +150,26 @@ else {
         const ListarFilmes = document.getElementById('lista-filmes');
         ListarFilmes.innerHTMl = '';
         if (catalogo.legth === 0) {
-            ListarFilmes.innerHTML = '<p>'Nenhum filme cadastrado nomomento.<p>';} else {
-                catalogo.array.forEach((filme,index) => {
-                    istarFilmes.innerHTML  +=
+            ListarFilmes.innerHTML = '<p>Nenhum filme cadastrado no momento.<p>';} else {
+                catalogo.forEach((filme,index) => {
+                    listaFilmes.innerHTML  +=
                     formatarDetalhesFilme((filme,index); });
                 }  
         }
-  </script>
+           // Funcao auxiliar para formatar os tetalhes de um filme com botoes de editar e excluir
+           function formatarDetalhesFilme(filme,index) {
+            return
+            <div class="filmes-item">
+            <strong>Nome:</strong> $[filme-nome]
+            <strong>classificacao indicativa:</strong> $ [filme.classificacao]
+            <strong>Duracao:/ <strong> $ [filme.duracao] minutos
+            <strong>Generos:/ <strong> $ [filme.genero]
+            <strong>ano de lancamento:/ <strong> $ [filem.ano]
+            <strong>sinopse:/ <strong> $ [filme.sinopse]
+<div class="actions">
+    <button
+    onclick="editarfilme(${index})">Editar </button>
+    <button onclick="excluirfilme"(${index})"style="background-color: #dc3545;"excluir</button>
+         </div>
+        </div>
+    `; 
