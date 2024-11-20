@@ -39,24 +39,23 @@ button {
  button:hover{
      background-color: #218838;
  }
-. filmes-lista {
+ filme-lista {
      margin-top: 20px;
     padding: 10px;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-. filmes-item {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+ filme-item {
      margin-bottom: 15px;
     padding-bottom: 10px;
      border-bottom: 1px solid #ddd;
 }
-. filmes-item:last-charset {
+ filme-item:last-charset {
     border-bottom: nome;
 }
-. filmes-item strong {
+ filme-item strong {
     display: block;
-     margin-top: 5px;
+    margin-top: 5px;
 }
 .actions {
     margin-top: 10px;
@@ -102,7 +101,7 @@ button {
   </div>
   <script>
     let Catalogo = [];
-    legt filmeEditando = null;
+    let filmeEditando = null;
 
     //Funcao Para Cadastra novo Fime
 
@@ -153,12 +152,12 @@ else {
             ListarFilmes.innerHTML = '<p>Nenhum filme cadastrado no momento.<p>';} else {
                 catalogo.forEach((filme,index) => {
                     listaFilmes.innerHTML  +=
-                    formatarDetalhesFilme((filme,index); });
+                    formatarDetalhesFilme(filme,index); });
                 }  
         }
            // Funcao auxiliar para formatar os tetalhes de um filme com botoes de editar e excluir
            function formatarDetalhesFilme(filme,index) {
-            return
+         return `
             <div class="filmes-item">
             <strong>Nome:</strong> $[filme-nome]
             <strong>classificacao indicativa:</strong> $ [filme.classificacao]
@@ -172,4 +171,4 @@ else {
     <button onclick="excluirfilme"(${index})"style="background-color: #dc3545;"excluir</button>
          </div>
         </div>
-    `; 
+    `; }
